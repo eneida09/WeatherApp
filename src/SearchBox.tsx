@@ -30,13 +30,14 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onSearch }) => {
   return (
     <div className="search-container">
       <input
-        type="text"
-        placeholder="Enter city name"
-        className="search-input"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-        onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-      />
+  type="text"
+   placeholder="Enter city name"
+  className="search-input"
+  value={city}
+  onChange={(e) => setCity(e.target.value)}
+  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+/>
+
 
       <button className="search-button" onClick={handleSearch}>
         <SearchIcon />
