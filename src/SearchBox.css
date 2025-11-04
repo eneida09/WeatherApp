@@ -1,0 +1,74 @@
+/* SearchBox.css */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+
+
+.search-input {
+  width: 250px;
+  height: 45px;
+  padding: 0 14px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.search-button {
+  height: 45px;
+  width: 50px;
+  border: none;
+  outline: none;
+  background-color: #1e90ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #187bcd;
+}
+
+.search-button svg {
+  font-size: 20px;
+  color: white;
+}
+.location-button {
+  height: 45px;
+  width: 50px;
+  border: none;
+  outline: none;
+  background-color: #99a4af;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.location-button:hover {
+  background-color: #63696e;
+}
+
+.location-button svg {
+  font-size: 20px;
+  color: white;
+}
