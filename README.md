@@ -37,7 +37,8 @@ It also includes an **interactive map (Leaflet)** where users can select a locat
 | **Vite** | Development & build tool |
 | **Leaflet + React-Leaflet** | Interactive map component |
 | **OpenWeather API** | Weather data source |
-| **CSS / TailwindCSS** | Styling and layout |
+| **Material UI (MUI)** | Ready-to-use UI components |
+| **CSS** | Custom styling and layout |
 
 ---
 
