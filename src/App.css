@@ -1,7 +1,7 @@
-/* app.css*/
+
 @import "leaflet/dist/leaflet.css";
 
-/* WeatherCard container */
+
 .weather-container {
   background: linear-gradient(135deg, #56ccf2, #2f80ed);
   border-radius: 2rem;
@@ -13,12 +13,11 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* SearchBox brenda kartës */
 .search-wrapper {
   margin-bottom: 1rem;
 }
 
-/* Main weather */
+
 .weather-icon {
   width: 100px;
   height: 100px;
@@ -42,21 +41,21 @@
   color: #f0f0f0;
 }
 
-/* Forecast container */
+
 .forecast-container {
   margin-top: 1rem;
   overflow-x: auto;
   padding-bottom: 0.3rem;
 }
 
-/* Forecast items */
+
 .forecast {
   display: flex;
   gap: 0.3rem;
 }
 
 .forecast-day {
-  flex: 0 0 50px; /* kompakt */
+  flex: 0 0 50px; 
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(4px);
   border-radius: 10px;
@@ -72,12 +71,12 @@
 
 .forecast-day p {
   margin: 0.1rem 0;
-  font-size: 0.65rem; /* më kompakt */
+  font-size: 0.65rem; 
   color: white;
 }
 
 .forecast-day img {
-  width: 30px;   /* ikonat më të dukshme */
+  width: 30px;   
   height: 30px;
   margin-bottom: 0.1rem;
 }

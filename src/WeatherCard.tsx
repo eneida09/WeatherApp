@@ -27,13 +27,13 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ data,onSearch }) => {
   let timeOfDay = "day";
   if (hours >= 16 && hours < 18) timeOfDay = "sunset";
   else if (hours >= 5 && hours < 7) timeOfDay = "sunrise";
-  else if (hours >= 20 || hours < 5) timeOfDay = "night";
+  else if (hours >= 18 || hours < 5) timeOfDay = "night";
 
   const gradientMap: Record<string, Record<string, string>> = {
     clear: {
       day: "radial-gradient(circle at center, #56ccf2, #2f80ed)",
       sunset: "radial-gradient(circle at center, #f2994a, #01153b7a)",
-      sunrise: "radial-gradient(circle at center, #f5af19ab, #005a6611)",
+      sunrise: "radial-gradient(circle at center,#f2994a, #01153b7a)",
       night: "radial-gradient(circle at center, #0f2027, #203a43, #2c5364)",
     },
     clouds: {

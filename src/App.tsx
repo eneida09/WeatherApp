@@ -5,8 +5,7 @@ import CurrentLocationWeather from "./CurrentLocationWeather";
 import type { weatherData } from "./WeatherCard";
 import "./App.css";
 
-const API_KEY = "6b816b89f57f6da87c825987c761dd98";
-
+const API_KEY = import.meta.env.VITE_API_KEY;
 const App: React.FC = () => {
   const [weather, setWeather] = useState<weatherData | null>(null);
   const [error, setError] = useState("");
@@ -30,7 +29,7 @@ const App: React.FC = () => {
     }
   };
 
-  // Kërko motin sipas koordinatave
+ 
   const fetchWeatherByCoords = async (coords: { lat: number; lon: number }) => {
     const { lat, lon } = coords;
     try {
@@ -63,7 +62,7 @@ const App: React.FC = () => {
     <div className="app">
     
 
-      {!weather && <CurrentLocationWeather onSearch={fetchWeatherByCoords} />}
+      {!weather && <CurrentLocationWeather onSearch={handleSearch} />}
 
       {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
       {weather && <WeatherCard data={weather} onSearch={handleSearch} />}

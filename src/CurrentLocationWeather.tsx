@@ -3,7 +3,7 @@ import WeatherCard from "./WeatherCard";
 import type { weatherData } from "./WeatherCard";
 import GeoLocation from "./GeoLocation";
 
-const API_KEY = "6b816b89f57f6da87c825987c761dd98";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 interface CurrentLocationWeatherProps {
   onSearch: any

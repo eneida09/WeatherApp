@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./SearchBox.css";
 import SearchIcon from "@mui/icons-material/Search";
 import RoomIcon from "@mui/icons-material/Room";
-import MapModal from "./MapModal"; // importo modalin e hartës
+import MapModal from "./MapModal";
 
 interface SearchBoxProps {
   onSearch: (cityOrCoords: string | { lat: number; lon: number }) => void;
@@ -54,8 +54,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onSearch }) => {
       {showMap && (
         <MapModal
           onSelectLocation={(lat, lon) => handleSelectLocation(lat, lon)}
-          onClose={() => setShowMap(false)}
-        />
+          onClose={() => setShowMap(false)} apiKey={""}        />
       )}
     </div>
   );
