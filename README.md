@@ -1,69 +1,52 @@
-# React + TypeScript + Vite
+# 🌦️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive **Weather Application** built with **React + TypeScript + Vite** that displays current weather and forecasts using the **OpenWeather API**.  
+It also includes an **interactive map (Leaflet)** where users can select a location to view weather data instantly.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔍 **Search weather** by city name  
+- 📍 **Select location** directly on an interactive map  
+- 🌤️ View:
+  - Current temperature and condition
+  - Weather icon (day/night)
+  - Wind speed and humidity
+  - 5-day forecast
+- 💎 Clean and responsive UI design  
+- ⚡ Fast performance using Vite + TypeScript  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🖼️ Screenshots
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🏙️ Weather Overview  
+<img width="1067" height="1038" alt="Screenshot 2025-11-11 121046" src="https://github.com/user-attachments/assets/c977545c-f992-4411-ae76-644321a3da9b" />
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🗺️ Location Picker  
+<img width="1613" height="843" alt="Screenshot 2025-11-11 121111" src="https://github.com/user-attachments/assets/6d06ab8d-836b-414b-a168-6c88d0013cc2" />
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Technology | Purpose |
+|-------------|----------|
+| **React + TypeScript** | Frontend framework |
+| **Vite** | Development & build tool |
+| **Leaflet + React-Leaflet** | Interactive map component |
+| **OpenWeather API** | Weather data source |
+| **CSS / TailwindCSS** | Styling and layout |
+
+---
+
+## 🔑 API Setup
+
+This project uses the free [OpenWeather API](https://openweathermap.org/api).
+
+1. Create a free account on OpenWeather.
+2. Go to your account → **API Keys** and copy your key.
+3. In your project root folder, create a new file named `.env` and add:
+   ```bash
+   VITE_API_KEY=your_openweather_api_key_here
